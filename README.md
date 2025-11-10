@@ -1,25 +1,33 @@
-# Vite + React Project
+# Project Description
 
-This is a React project bootstrapped with [Vite](https://vitejs.dev/). It uses npm as the package manager and supports environment variables for secure configuration.
+A lightweight *AI-integrated web app* built with *React + Vite*, allowing users to chat with an AI model in a clean and interactive interface.  
+This project was developed as part of a *Frontend Engineer Technical Assessment* to showcase strong UI/UX design, API integration, and clean architecture.
 
----
 
-## 🚀 Features
-- Fast development with Vite
-- Modern React setup with JSX/TSX support
-- Environment variable support via `.env` file
-- Ready for integration with the OpenAI API
 
----
+## Features
+- Chat with AI using OpenAI API  
+- Modern UI with *Material UI (MUI)*  
+- Clear button to reset conversation  
+- Error dispplayed using *React Toastify*  
+- Maintains dynamic chat history  
+- Environment variable for secure API key (VITE_OPENAI_API_KEY)
 
-## 🧰 Prerequisites
+## Tech Stack
+- React (Vite)
+- MUI
+- JavaScript/TypeScript
+- OpenAI API
+- React Toastify
+
+
+## Prerequisites
 Make sure you have the following installed:
 - Node.js (v18 or newer)
 - npm (v9 or newer)
 
----
 
-## ⚙️ Setup
+## Setup
 
 ### 1. Clone the repository
     https://github.com/AkashdeepSingh0047/AIChat.git
@@ -42,7 +50,7 @@ Open your browser and go to the URL displayed in the terminal (usually http://lo
 
 ---
 
-## 🧪 Build and Preview
+##  Build and Preview
 ### To create a production build:
     npm run build
 
