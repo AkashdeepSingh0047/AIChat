@@ -1,0 +1,105 @@
+/* Top header bar containing icon, title and clear button */
+
+.ai-header {
+  width: 100%;                     /* Full width of the container */
+  height: 48px;                    /* Fixed header height */
+  box-sizing: border-box;          /* Include padding in total width/height */
+  display: flex;                   /* Flex layout for horizontal alignment */
+  flex-direction: row;             /* Arrange children in a row */
+  align-items: center;             /* Vertically center items */
+  justify-content: space-between;  /* Space between icon/title and clear button */
+  padding: 16px 16px 0px 16px;     /* Inner spacing on top right bottom and left */
+  color: #fff;                   /* Default text color */
+}
+
+/* Gradient circular container behind the AutoAwesome icon */
+.ai-header-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 25%;              /* Rounded square shape */
+  display: flex;                   /* Center the icon horizontally/vertically */
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #a855f7); /* Purple-blue gradient */
+}
+
+/* AutoAwesome icon styling */
+.ai-header-icon {
+  font-size: 20px;                 /* Icon size kept consistent */
+}
+
+/* Title text ("AI Chat") displayed beside the icon */
+.ai-header-title {
+  margin-left: 12px;               /* Space between icon and text */
+  font-weight: 600;                /* Semi-bold for emphasis */
+  font-size: 16px;                 /* Medium font size */
+  color: black;                  /* Black text for readability */
+}
+
+/* Container that holds the "Clear" button aligned to the right */
+.ai-header-clear {
+  display: flex;
+  align-items: center;
+  margin-left: auto;               /* Push button to the far right */
+}
+
+/* Preserve the red border color when hovering over the Clear button */
+.ai-clear-btn.MuiButton-outlinedError:hover {
+  border-color: red;
+}
+
+/* === MAIN CONTENT SECTION === */
+/* Container that holds the chat area and input bar */
+.ai-main {
+  display: flex;
+  flex-direction: column;          /* Stack chat and input vertically */
+  height: calc(100% - 48px);       /* Full height minus the header */
+  justify-content: center;         /* Vertically center content */
+  align-items: center;             /* Horizontally center content */
+  padding-left: 90px;              /* Space on left for consistent layout */
+  padding-right: 90px;             /* Space on right for consistent layout */
+}
+
+/* Scrollable section containing all chat messages */
+.ai-chat-history {
+  width: 100%;                     /* Full width available */
+  height: calc(100% - 64px);       /* Leave space at bottom for input bar */
+  overflow: auto;                  /* Allow scrolling when chat overflows */
+  padding-top: 16px;               /* Top padding (pt={2}) */
+}
+
+/* === INPUT SECTION === */
+/* Wrapper for text input and send button */
+.ai-input-wrapper {
+  width: 100%;                     /* Full width at bottom */
+  display: flex;
+  align-items: flex-end;           /* Align input and button at bottom */
+  justify-content: center;         /* Center them horizontally */
+  margin-top: 16px;                /* Space above input (mt={2}) */
+  margin-bottom: 16px;             /* Space below input (mb={2}) */
+}
+
+/* Avatar style for AI “typing” skeleton message
+   Matches the gradient style of the AI icon */
+.ai-avatar {
+  width: 36px !important;
+  height: 36px !important;
+  background: linear-gradient(135deg, #6366f1, #a855f7) !important;
+}
+
+/* Send button (➤): gradient-filled, no outline */
+.ai-send-btn.MuiButton-contained {
+  outline: none !important;        /* Remove focus outline */
+  background: linear-gradient(135deg, #6366f1, #a855f7); /* Gradient match */
+}
+
+/* Keep gradient color the same even on hover */
+.ai-send-btn.MuiButton-contained:hover {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+/* Small vertical adjustment for the plane icon inside the send button */
+.ai-plane {
+  display: inline-block;           /* Allows transform adjustment */
+  transform: translateY(1px);      /* Nudge icon slightly for better alignment */
+}

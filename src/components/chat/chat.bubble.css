@@ -1,0 +1,64 @@
+/* === Main chat row container for each message === */
+.chat-row {
+    width: 100%;              /* Full width for each chat message row */
+    display: flex;            /* Align avatar and bubble horizontally */
+    margin-bottom: 12px;      /* Space between consecutive messages */
+}
+
+/* === AI response messages aligned to the left === */
+.chat-row.left {
+    justify-content: start;   /* Push bubbles to the left side */
+}
+
+/* === User input messages aligned to the right === */
+.chat-row.right {
+    justify-content: end;     /* Push bubbles to the right side */
+}
+
+/* === Shared chat bubble styling === */
+.chat-bubble {
+    max-width: 80%;           /* Limit width so bubbles don’t stretch too far */
+    padding: 12px 16px;       /* Inner padding for text comfort */
+    border-radius: 14px;      /* Smooth, rounded bubble edges */
+    font-size: 0.95rem;       /* Readable font size */
+    line-height: 1.4;         /* Add line spacing for multi-line text */
+    word-wrap: break-word;    /* Prevent long text from overflowing */
+    display: inline-block;    /* Make bubble wrap tightly around content */
+    transition: all 0.2s ease;/* Smooth animation for visual changes */
+    margin: 0 15px;           /* Space between avatar and text bubble */
+}
+
+/* === Style for AI-generated (response) messages === */
+.chat-bubble.response {
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.12); /* Subtle drop shadow for depth */
+    -webkit-box-shadow: 0 5px 15px rgba(15, 23, 42, 0.12);
+    -moz-box-shadow: 0 5px 15px rgba(15, 23, 42, 0.12);
+    color: #000;              /* Black text for clarity */
+    border-radius: 14px 14px 14px 0px; /* Slight corner cut on bottom-left for “tail” effect */
+}
+
+/* === Style for user-entered (input) messages === */
+.chat-bubble.input {
+    background-color: #bbb;   /* Light gray background for user messages */
+    color: black;             /* Black text for readability */
+    border-radius: 14px 14px 0px 14px; /* Tail on the opposite corner (bottom-right) */
+}
+
+/* === Optional text styles (for future enhancements) === */
+.chat-name {
+    font-weight: 600;         /* Slightly bold text, e.g., username */
+    margin-bottom: 4px;       /* Small space below name */
+}
+
+.chat-age {
+    opacity: 0.9;             /* Slight transparency for secondary text */
+}
+
+/* === Responsive adjustments for mobile screens === */
+@media (max-width: 600px) {
+    .chat-bubble {
+        max-width: 90%;       /* Allow more space for text on smaller screens */
+        font-size: 0.9rem;    /* Slightly smaller font for compact view */
+        padding: 10px 12px;   /* Reduce padding for smaller layout */
+    }
+}

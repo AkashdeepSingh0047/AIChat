@@ -1,110 +1,119 @@
+/* === Root container that holds the entire React app === */
 #root {
-  width: 100dvw;
-  height: 100dvh;
-  background-color: #fff;
-  text-align: center;
+  width: 100dvw;                 /* Full viewport width (dynamic unit) */
+  height: 100dvh;                /* Full viewport height (dynamic unit) */
+  background-color: #fff;      /* White background for the app */
+  text-align: center;            /* Center text horizontally */
 }
 
+/* === Page wrapper for centering the AI card vertically & horizontally === */
 .ai-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;  
-
+  display: flex;                 /* Use flexbox for centering */
+  align-items: center;           /* Vertically center content */
+  justify-content: center;       /* Horizontally center content */
+  height: 100%;                  /* Fill available height */
+  width: 100%;                   /* Fill available width */
 }
 
+/* === Main AI card container === */
 .ai-card {
-  width: calc(100% - 48px );
-  padding: 40px 24px 32px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
-  margin: 0 100px;
-  text-align: center;
+  width: calc(100% - 48px);      /* Leave slight space on edges */
+  padding: 40px 24px 32px;       /* Inner spacing for balance */
+  background: #ffffff;         /* Clean white card background */
+  border-radius: 16px;           /* Rounded edges for soft design */
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12); /* Depth shadow */
+  margin: 0 100px;               /* Center spacing from sides */
+  text-align: center;            /* Center text and elements inside */
 }
 
+/* === Icon container at the top of the card === */
 .ai-icon {
   width: 80px;
   height: 80px;
-  margin: 0 auto 16px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #6366f1, #a855f7);
-  display: flex !important;
+  margin: 0 auto 16px;           /* Center horizontally with space below */
+  border-radius: 24px;           /* Rounded corners for the icon box */
+  background: linear-gradient(135deg, #6366f1, #a855f7); /* Gradient color */
+  display: flex !important;      /* Ensure flex for centering the icon */
   align-items: center !important;
   justify-content: center !important;
-  color: white;
-  font-size: 30px;
-  position: relative;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+  color: white;                /* White icon color */
+  font-size: 30px;               /* Icon size */
+  position: relative;            /* For any future child positioning */
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35); /* Glow effect */
 }
 
-.MuiIcon-fontSizeInherit{
+/* === Override default Material UI icon font size === */
+.MuiIcon-fontSizeInherit {
   font-size: 16px !important;
 }
 
+/* === Card title text ("Welcome to AI Chat") === */
 .ai-title {
-  margin: 0 0 24px;
-  font-size: 28px;
-  font-weight: 700;
-  color: #020617;
+  margin: 0 0 24px;              /* Space below the title */
+  font-size: 28px;               /* Large, readable heading */
+  font-weight: 700;              /* Bold for emphasis */
+  color: #020617;              /* Deep navy text color */
 }
 
+/* === Input wrapper for the message box and send button === */
 .ai-input-wrapper {
   position: relative;
-  border-radius: 18px;
-  border: 1px solid #2563eb;
-  overflow: hidden;
-  min-height: 56px;
+  border-radius: 18px;           /* Smooth rounded border */
+  border: 1px solid #2563eb;   /* Blue border matching  theme */
+  overflow: hidden;              /* Prevent inner elements from spilling out */
+  min-height: 56px;              /* Ensure consistent height */
 }
 
+/* === Text input field styling === */
 .ai-textarea.MuiInputBase-root {
-  width: 100%;
-  border: none;
-  resize: none;
-  padding: 18px 18px 18px 18px;
-  font-size: 14px;
-  min-height: 40px;
-  outline: none;
+  width: 100%;                   /* Full width input field */
+  border: none;                  /* Remove default border */
+  resize: none;                  /* Disable resizing for cleaner UI */
+  padding: 18px 18px 18px 18px;  /* Equal inner padding */
+  font-size: 14px;               /* Readable font size */
+  min-height: 40px;              /* Maintain consistent height */
+  outline: none;                 /* Remove focus outline */
 }
 
-
-
+/* === Send button beside the input === */
 .ai-send-btn {
-  width: 44px;
+  width: 44px;                   /* Circular size */
   height: 44px;
-  border-radius: 50%;
-  margin-right: 10px !important;
-  margin-bottom: 6px !important;
-  border: none;
-  cursor: pointer;
-  display: flex;
+  border-radius: 50%;            /* Perfect circle shape */
+  margin-right: 10px !important; /* Space between button and border */
+  margin-bottom: 6px !important; /* Small bottom gap */
+  border: none;                  /* Clean button look */
+  cursor: pointer;               /* Pointer on hover */
+  display: flex;                 /* Center arrow icon */
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35); /* Subtle glow effect */
+  transition: transform 0.12s ease,
+              box-shadow 0.12s ease,
+              background-color 0.12s ease;        /* Smooth hover animations */
 }
 
-
-
+/* === Arrow icon ("➤") inside the send button === */
 .ai-plane {
-  color: white;
-  font-size: 18px;
+  color: white;                /* White icon for contrast */
+  font-size: 18px;               /* Medium size icon */
 }
 
+/* === Small disclaimer text at the bottom of the card === */
 .ai-disclaimer {
-  margin: 12px 0 0;
-  font-size: 12px;
-  color: #6b7280;
+  margin: 12px 0 0;              /* Space above disclaimer */
+  font-size: 12px;               /* Smaller text size */
+  color: #6b7280;              /* Muted gray for subtle tone */
 }
 
+/* === Responsive styles for mobile view === */
 @media (max-width: 600px) {
   .ai-card {
-    margin: 16px;
-    padding: 32px 16px 24px;
+    margin: 16px;                /* Reduce outer spacing */
+    padding: 32px 16px 24px;     /* Compact inner padding */
   }
 
   .ai-title {
-    font-size: 22px;
+    font-size: 22px;             /* Smaller title for small screens */
   }
 }
